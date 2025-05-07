@@ -20,6 +20,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('api/signup/', SignUpView.as_view(), name='signup'),
     path('api/login/', LoginView.as_view(), name='login'),
+
     # Swagger UI
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-docs'),
 ]
